@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>Modelos</h1>
+<a th:href="@{/modelos/novo}">Novo modelo</a>
+<table>
+    <tr th:each="m : ${modelos}">   <!-- "modelos" é o nome que você pôs na sacola -->
+        <td th:text="${m.fabricante}"></td>
+        <td th:text="${m.nome}"></td>
+        <td th:text="${m.obsoleto} ? 'Sim' : 'Não'"></td>
+    </tr>
+</table>
+</body>
+</html>
